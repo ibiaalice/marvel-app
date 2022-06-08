@@ -3,9 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:marvel_app/domain/entities/character.dart';
-import 'package:marvel_app/domain/entities/comic.dart';
 import 'package:marvel_app/screen/characters/details/details_character_page.dart';
-import 'package:marvel_app/screen/comics/details/comics_details_page.dart';
 
 void main() {
   setUpAll(() => HttpOverrides.global = null);

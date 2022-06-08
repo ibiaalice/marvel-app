@@ -30,9 +30,7 @@ class GetCharacters {
 
     for (final Map characterData in charactersData) {
       Character character = Character.fromMap(characterData);
-
       if (character.imgUrl.contains('image_not_available')) continue;
-      print(character.name);
       characters.add(character);
     }
 

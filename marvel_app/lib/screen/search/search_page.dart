@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:marvel_app/domain/core/custom_colors.dart';
-import 'package:marvel_app/domain/core/marvel_icons.dart';
 import 'package:marvel_app/screen/home/widgets/characters_list.dart';
 import 'package:marvel_app/screen/search/search_store.dart';
 import 'package:marvel_app/screen/search/widgets/search_text_form_field.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:marvel_app/screen/search/widgets/search_text_form_field.dart';
-import 'package:marvel_app/screen/widgets/title_body.dart';
 
 void main() {
   testWidgets('Search TextFormField test', (WidgetTester tester) async {

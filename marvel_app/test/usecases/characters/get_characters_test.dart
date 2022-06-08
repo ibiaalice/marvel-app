@@ -7,14 +7,14 @@ import 'package:marvel_app/domain/usecases/characters/get_characters.dart';
 void main() {
   setUpAll(() => HttpOverrides.global = null);
 
-  final GetCharacters _getCharacters = GetCharacters();
+  final GetCharacters getCharacters = GetCharacters();
 
   test('get characters by offset', () async {
     List<Character> characters = [];
 
     expect(characters.isEmpty, equals(true));
 
-    characters = await _getCharacters.byOffSet(0);
+    characters = await getCharacters.byOffSet(0);
 
     expect(characters.isEmpty, equals(false));
     expect(characters.isNotEmpty, equals(true));
@@ -25,12 +25,12 @@ void main() {
 
     expect(characters.isEmpty, equals(true));
 
-    characters = await _getCharacters.byName('Iron Man');
+    characters = await getCharacters.byName('Iron Man');
 
     expect(characters.isEmpty, equals(false));
     expect(characters.isNotEmpty, equals(true));
 
-    characters = await _getCharacters.byName('Dollynho');
+    characters = await getCharacters.byName('Dollynho');
 
     expect(characters.isEmpty, equals(true)); //acho ultrajante
   });

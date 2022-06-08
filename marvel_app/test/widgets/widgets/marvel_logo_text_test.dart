@@ -4,11 +4,9 @@ import 'package:marvel_app/screen/widgets/marvel_logo_text.dart';
 
 void main() {
   testWidgets('Marvel Logo Text test', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(const MaterialApp(
       home: Scaffold(
-        body: Container(
-          child: const MarvelLogoText(),
-        ),
+        body: MarvelLogoText(),
       ),
     ));
 
