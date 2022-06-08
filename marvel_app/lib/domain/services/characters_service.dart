@@ -23,6 +23,21 @@ class CharactersService {
     return {};
   }
 
+  searchByName(String name) async {
+    final String hash = _apiHashCode();
+
+    try {
+      final Response response = await _dio.get(
+          '${API_URL}characters?nameStartsWith=$name&limit=100&apikey=$PUBLIC_API_KEY&hash=$hash&ts=${timeStamp.toIso8601String()}',
+          options: Options(headers: {}));
+      if (response.statusCode == 200) {
+        return response.data["data"];
+      }
+    } catch (error) {
+      throw Error();
+    }
+  }
+
   String _apiHashCode() {
     final String hash = _generateMd5(
         timeStamp.toIso8601String() + PRIVATE_API_KEY + PUBLIC_API_KEY);

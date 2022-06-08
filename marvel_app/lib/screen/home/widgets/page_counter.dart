@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marvel_app/domain/core/custom_colors.dart';
 
 class PageCounter extends StatelessWidget {
   final String value;
@@ -14,8 +13,7 @@ class PageCounter extends StatelessWidget {
     return Center(
       child: Container(
         decoration: BoxDecoration(
-          // color: CustomColors.logo,
-          color: Color(0xff96979a),
+          color: const Color(0xff96979a),
           borderRadius: BorderRadius.circular(30),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

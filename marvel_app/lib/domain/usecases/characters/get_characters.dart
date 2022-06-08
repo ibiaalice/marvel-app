@@ -21,4 +21,21 @@ class GetCharacters {
     }
     return characters;
   }
+
+  Future<List<Character>> byName(String name) async {
+    List<Character> characters = [];
+    final result = await _charactersService.searchByName(name);
+
+    List charactersData = result['results'];
+
+    for (final Map characterData in charactersData) {
+      Character character = Character.fromMap(characterData);
+
+      if (character.imgUrl.contains('image_not_available')) continue;
+      print(character.name);
+      characters.add(character);
+    }
+
+    return characters;
+  }
 }
