@@ -15,3 +15,13 @@ Also used:
 - [Marvel Font](https://fonts.google.com/specimen/Marvel?query=marvel) - FontFamily
 - [Indie Flowers Font](https://fonts.google.com/specimen/Indie+Flower?query=indie) - FontFamily
 - random icons
+
+
+
+if  you need run the tests, please run command:
+
+```flutter test```
+
+
+
+> that's all folks! 
