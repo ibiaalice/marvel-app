@@ -28,9 +28,6 @@ class _SearchPageState extends State<SearchPage> {
           ),
         ),
         backgroundColor: CustomColors.background,
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          store.searchCharacters();
-        }),
         body: Observer(builder: (context) {
           return Column(
             children: [

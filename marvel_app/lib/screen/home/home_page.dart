@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:marvel_app/domain/core/custom_colors.dart';
@@ -7,6 +8,7 @@ import 'package:marvel_app/screen/home/widgets/characters_list.dart';
 import 'package:marvel_app/screen/home/widgets/home_title.dart';
 import 'package:marvel_app/screen/home/widgets/page_counter.dart';
 import 'package:marvel_app/screen/search/search_page.dart';
+import 'package:marvel_app/screen/widgets/copyright_alert_dialog.dart';
 import 'package:marvel_app/screen/widgets/license_footer.dart';
 import 'package:marvel_app/screen/widgets/loading_card.dart';
 import 'package:marvel_app/screen/widgets/logo_app_bar.dart';
@@ -53,7 +55,13 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: CustomColors.logo,
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (context) {
+                return const CopyrightAlertDialog();
+              });
+        },
         child: const Icon(Marvel.spiderman),
       ),
       body: Observer(
