@@ -28,3 +28,6 @@ to run the app, you need to follow the steps:
 4. run the app
 ```flutter run ```
 
+
+
+Here's a short demo [video](https://youtu.be/muihAVLPGtU) of the app running!
